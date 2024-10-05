@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Green Future 🌎</title>
         <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/sign-in.css" />
     </head>
     <body>
         <header>
@@ -26,8 +27,63 @@
                 >
             </ul>
         </header>
-        <main></main>
+        <main>
+            <section class="sign-up-mode">
+                <h2>Make the <span class="shadow">change</span></h2>
+                <div id="tabs">
+                    <p id="sign-up-tab">Sign Up</p>
+                    <p id="sign-in-tab">Log In</p>
+                </div>
+                <div id="forms">
+                    <div id="sign-up">
+                        <h3>Start your journey</h3>
+                        <form action="">
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <label for="username">Username</label>
+                                <input type="text" />
+                                <label
+                                    >Innapropriate Usernames
+                                    <strong>will</strong> be banned, no spaces
+                                    or special characters</label
+                                >
+                            </div>
+                            <div>
+                                <label for="password">Password</label>
+                                <input type="password" />
+                            </div>
+                            <div>
+                                <label for="confirm-password"
+                                    >Confirm Password</label
+                                >
+                                <input type="password" />
+                            </div>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div id="sign-in" class="form-hide">
+                        <h3>Returning member?</h3>
+                        <form action="">
+                            <div>
+                                <label for="email/username"
+                                    >Email/Username</label
+                                >
+                                <input type="text" />
+                            </div>
+                            <div>
+                                <label for="password">Password</label>
+                                <input type="password" />
+                            </div>
+                            <button type="submit">Sign In</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer></footer>
-        <script src="../scripts/main.js"></script>
+        <script src="../scripts/sign-in.js"></script>
     </body>
 </html>

@@ -19,7 +19,7 @@ body {
 }
 
 .hide-me {
-    display: none;
+    display: none !important;
 }
 
 a {
@@ -150,16 +150,8 @@ header > ul > a {
 
 /* absoloute positioning */
 
-@media screen and (min-width: 800px) {
-    main {
-        margin-top: 100px;
-    }
-}
-
-@media Screen and (max-width: 800px) {
-    main {
-        margin-top: 80px;
-    }
+main {
+    margin-top: 100px;
 }
 
 /* main */
