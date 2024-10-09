@@ -33,14 +33,14 @@
         <div id="forms">
           <div id="sign-up">
             <h3>Start your journey</h3>
-            <form action="">
+            <form action="../utils/create-account.php" method="post">
               <div>
                 <label for="email">Email</label>
-                <input type="text" />
+                <input required type="text" name="email" />
               </div>
               <div>
                 <label for="username">Username</label>
-                <input type="text" />
+                <input required type="text" name="username" />
                 <label
                   >Innapropriate Usernames <strong>will</strong> be banned, no
                   spaces or special characters</label
@@ -48,11 +48,11 @@
               </div>
               <div>
                 <label for="password">Password</label>
-                <input type="password" />
+                <input required type="password" name="password" />
               </div>
               <div>
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" />
+                <input required type="password" name="confirm-password" />
               </div>
               <button type="submit">Sign Up</button>
             </form>
@@ -62,11 +62,11 @@
             <form action="">
               <div>
                 <label for="email/username">Email/Username</label>
-                <input type="text" />
+                <input required type="text" />
               </div>
               <div>
                 <label for="password">Password</label>
-                <input type="password" />
+                <input required type="password" />
               </div>
               <button type="submit">Sign In</button>
             </form>
