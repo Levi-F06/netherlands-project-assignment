@@ -2,21 +2,7 @@
 
 include "./db-connect.php";
 
-function clean_data($data)
-{
-  $data = trim($data);
-  $data = stripslashes($data);
-  return htmlspecialchars($data);
-}
-
-function form_exit($msg)
-{
-  echo "<script>";
-  echo "alert('$msg');";
-  echo "window.location.href = '../pages/sign-in.html'";
-  echo "</script>";
-  exit();
-}
+include "./utils.php";
 
 function check_exist($val, $result, $db_connection)
 {
@@ -39,8 +25,11 @@ if ($password != $confirm_password) {
 if (strlen(htmlspecialchars_decode($password)) < 8) {
   form_exit("Password must be atleast 8 characters long");
 }
-if (!str_contains(html_entity_decode($email), "@")) {
+if (!str_contains(htmlspecialchars_decode($email), "@")) {
   form_exit("Invalid email");
+}
+if (str_contains(htmlspecialchars_decode($username), "@")) {
+  form_exit("username can not contain the @ symbol!");
 }
 
 $password = password_hash($password, PASSWORD_DEFAULT);
