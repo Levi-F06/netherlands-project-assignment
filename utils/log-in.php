@@ -30,7 +30,7 @@ $results = $results->fetch_assoc();
 
 if (password_verify($password, $results["password"])) {
   create_session($results);
-  form_exit("Successful sign in");
+  header("Location: ../pages/account.php");
 } else {
   form_exit("Double check that password buddy 😬");
 }
