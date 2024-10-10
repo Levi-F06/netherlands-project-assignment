@@ -25,4 +25,5 @@ function create_session($data)
   $_SESSION["email"] = $data["email"];
   $_SESSION["creation"] = $data["creation"];
   $_SESSION["footprint"] = $data["footprint"];
+  $_SESSION["footprint-date"] = $data["footprint-date"];
 }

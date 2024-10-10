@@ -28,7 +28,7 @@ if (!$_SESSION["uid"]) {
       <a class="nav-link" href="./events.html">
         <li>Events</li>
       </a>
-      <a class="nav-link" href="./carbon-footprint-calculator.html">
+      <a class="nav-link" href="./carbon-footprint-calculator.php">
         <li>Calculator</li>
       </a>
       <a class="nav-link" id="current-page" href="./sign-in.php">
@@ -69,11 +69,11 @@ if (!$_SESSION["uid"]) {
             echo "<p>My carbon footprint as of " . $_SESSION['footprint-date']
               . " is " . $_SESSION["footprint"];
             echo "<p>Retake the test <a 
-            href='./carbon-footprint-calculator.html'>here</a>";
+            href='./carbon-footprint-calculator.php'>here</a>";
           } else {
             echo "<p>You have not yet taken the carbon footprint test.</p>";
             echo "<p>Take the test <a 
-            href='./carbon-footprint-calculator.html'>here</a>";
+            href='./carbon-footprint-calculator.php'>here</a>";
           }
           ?>
         </div>
