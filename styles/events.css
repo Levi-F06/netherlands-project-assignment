@@ -1,0 +1,99 @@
+#intro {
+  width: 100%;
+  background-color: #84a98c;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h1 {
+  border-bottom: 2px solid #354f52;
+  width: inherit;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+button {
+  padding: 10px;
+  border: 2px solid #cad2c5;
+  border-radius: 10px;
+  background-color: #84a98c;
+  color: #cad2c5;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover,
+.active-button {
+  background-color: #cad2c5;
+  color: #84a98c;
+  box-shadow: 0 0 10px #84a98c;
+}
+
+a {
+  color: #2f3e46;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 2px solid #84a98c;
+  border-radius: 10px;
+  font-size: 16px;
+  /* width: 100%; */
+  background-color: #cad2c5;
+  color: #354f52;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #52796f;
+  box-shadow: 0 0 10px #52796f;
+}
+
+#create-event {
+  position: absolute;
+  margin-top: 120px;
+  background-color: #cad2c5;
+  border: 8px solid #84a98c;
+  border-radius: 18px;
+  padding: 50px;
+  box-shadow: 0px 0px 25px #354f52;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+textarea {
+  margin-bottom: 20px;
+}
+
+.image-container > img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+}
+
+.image-container,
+#cover-image-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+#cover-image-select > div {
+  display: flex;
+  gap: 16px;
+}
