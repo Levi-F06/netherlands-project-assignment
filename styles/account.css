@@ -59,12 +59,20 @@ input:hover {
   transition: all 0.3s;
 }
 
+#title {
+  flex-direction: column;
+  gap: 32px;
+}
+
 @media screen and (min-width: 800px) {
-  #title {
-    flex-direction: column;
-    gap: 32px;
-  }
   button {
     font-size: 32px;
+    border: 2px solid red;
+  }
+}
+
+@media sceeen and (max-width: 800px) {
+  .account-info > p {
+    font-size: 12px;
   }
 }

@@ -20,6 +20,8 @@ body {
 
 .hide-me {
   display: none !important;
+  font-size: 0 !important;
+  color: transparent !important;
 }
 
 a {

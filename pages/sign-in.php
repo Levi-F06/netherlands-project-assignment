@@ -28,7 +28,7 @@ if (isset($_SESSION["uid"])) {
       <a class="nav-link" href="./events.html">
         <li>Events</li>
       </a>
-      <a class="nav-link" href="./carbon-footprint-calculator.php">
+      <a class="nav-link" href="./calc.php">
         <li>Calculator</li>
       </a>
       <a class="nav-link" id="current-page" href="./sign-in.php">

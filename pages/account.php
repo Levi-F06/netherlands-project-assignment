@@ -28,7 +28,7 @@ if (!$_SESSION["uid"]) {
       <a class="nav-link" href="./events.html">
         <li>Events</li>
       </a>
-      <a class="nav-link" href="./carbon-footprint-calculator.php">
+      <a class="nav-link" href="./calc.php">
         <li>Calculator</li>
       </a>
       <a class="nav-link" id="current-page" href="./sign-in.php">
@@ -39,7 +39,9 @@ if (!$_SESSION["uid"]) {
   <main>
     <section class="flex-me">
       <div id="title" class="flex-me">
-        <h2><span class="shadow"><?php echo $_SESSION["username"]; ?>'s</span> page</h2>
+        <h2><span class="shadow"><?php echo $_SESSION[
+          "username"
+        ]; ?>'s</span> page</h2>
         <form action="../utils/sign-out.php">
           <input type="submit" value="Sign out">
 
@@ -56,7 +58,7 @@ if (!$_SESSION["uid"]) {
           </div>
           <div class="info flex-me">
             <p>Email:</p>
-            <p><?php echo $_SESSION["email"] ?></p>
+            <p><?php echo $_SESSION["email"]; ?></p>
           </div>
         </div>
       </div>
@@ -64,18 +66,28 @@ if (!$_SESSION["uid"]) {
       <div class="info-sec flex-me">
         <h3>Carbon Footprint</h3>
         <div class="account-info flex-me">
-          <?php
-          if ($_SESSION["footprint"]) {
-            echo "<p>My carbon footprint as of " . $_SESSION['footprint-date']
-              . " is " . $_SESSION["footprint"];
-            echo "<p>Retake the test <a 
-            href='./carbon-footprint-calculator.php'>here</a>";
+          <?php if ($_SESSION["footprint"]) {
+            echo "<p>My carbon footprint as of " .
+              $_SESSION["footprint-date"] .
+              " is <strong>" .
+              $_SESSION["footprint"] .
+              "</strong> pounds";
+            if ($_SESSION["footprint"] < 16000) {
+              echo "<p>My carbon footprint is considered low compared
+              to the average!</p>";
+            } elseif ($_SESSION["footprint"] <= 22000) {
+              echo "<p>My carbon footprint is considered to be the average
+              !</p>";
+            } else {
+              echo "<p>My carbon footprint is currently above the average!</p>";
+            }
+            echo "<p>Retake the test to see if you have improved
+              <a href='./calc.php'>here</a>";
           } else {
             echo "<p>You have not yet taken the carbon footprint test.</p>";
-            echo "<p>Take the test <a 
-            href='./carbon-footprint-calculator.php'>here</a>";
-          }
-          ?>
+            echo "<p>Take the test <a
+            href='./calc.php'>here</a>";
+          } ?>
         </div>
       </div>
 
