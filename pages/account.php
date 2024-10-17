@@ -25,7 +25,7 @@ if (!$_SESSION["uid"]) {
       <a class="nav-link" href="../index.html">
         <li>Home</li>
       </a>
-      <a class="nav-link" href="./events.html">
+      <a class="nav-link" href="./events.php">
         <li>Events</li>
       </a>
       <a class="nav-link" href="./calc.php">

@@ -86,6 +86,7 @@ input:focus {
 input[type="radio"] {
   transform: scale(1.5);
   border: none;
+  cursor: pointer;
 }
 
 input[type="radio"] {

@@ -97,3 +97,11 @@ textarea {
   display: flex;
   gap: 16px;
 }
+
+input[type="radio"] {
+  accent-color: #52796f;
+}
+
+input[type="radio"]:focus {
+  outline: none;
+}

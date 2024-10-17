@@ -29,15 +29,15 @@ session_start(); ?>
         <h1>Current Events!</h1>
         <?php if ($_SESSION["uid"]) {
           echo "<div id='buttons''>";
-          echo "<button>My events</button>";
-          echo "<button>Create an event</button>";
+          echo "<button class='control'>My events</button>";
+          echo "<button class='control'>Create an event</button>";
           echo "</div>";
         } else {
           echo "<p>To get the most out of this page, create an <a href='./sign-in.php'>account</a></p>";
         } ?>
       </section>
-      <section id="create-event">
-        <form action="">
+      <section class="hide-me" id="create-event">
+        <form action="../utils/create-event.php" method="post">
           <input required name="name" type="text" placeholder="Event name">
           <textarea rows="2" required name="description" type="textarea" placeholder="Enter a description..."></textarea>
           <p>Enter the starting date (if needed)</p>
@@ -47,22 +47,22 @@ session_start(); ?>
             <div>
               <div class="image-container">
                 <img src="../images/events/0.jpeg" alt="">
-                <input name="cover-image" type="radio">
+                <input name="cover-image" type="radio" value="0" checked>
               </div>
               <div class="image-container">
                 <img src="../images/events/1.jpeg" alt="">
-                <input name="cover-image" type="radio">
+                <input name="cover-image" type="radio" value="1">
               </div>
             </div>
 
             <div>
               <div class="image-container">
                 <img src="../images/events/2.jpeg" alt="">
-                <input name="cover-image" type="radio">
+                <input name="cover-image" type="radio" value="2">
               </div>
               <div class="image-container">
                 <img src="../images/events/3.jpeg" alt="">
-                <input name="cover-image" type="radio">
+                <input name="cover-image" type="radio" value="3">
               </div>
             </div>
 
@@ -75,5 +75,6 @@ session_start(); ?>
     </main>
     <footer></footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/events.js"></script>
   </body>
 </html>
