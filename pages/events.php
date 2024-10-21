@@ -37,7 +37,7 @@ session_start(); ?>
         } ?>
       </section>
       <section class="hide-me" id="create-event">
-        <form action="../utils/create-event.php" method="post">
+        <form class="create-event" action="../utils/create-event.php" method="post">
           <input required name="name" type="text" placeholder="Event name">
           <textarea rows="2" required name="description" type="textarea" placeholder="Enter a description..."></textarea>
           <p>Enter the starting date (if needed)</p>
@@ -65,11 +65,20 @@ session_start(); ?>
                 <input name="cover-image" type="radio" value="3">
               </div>
             </div>
-
-
           </div>
           <button>Submit</button>
         </form>
+      </section>
+      <section id="eventOverlay"></section>
+      <section id="events">
+      <?php
+      include "../utils/get_events.php";
+      if ($_SESSION["event-view"]) {
+        show_event($_SESSION["event-view"]);
+      } else {
+        get_events();
+      }
+      ?>
       </section>
 
     </main>
