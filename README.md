@@ -47,6 +47,6 @@ If for some reason you want to set up and run this web app yourself, you will ne
 4. On phpmyadmin (or through some other way) create a database called 'green_future
 5. Follow this layout for the tables:
 
-![ERD for the project](./images/readme/erd.png)
+![ERD for the project](./images/readme/ERD.png)
 
 6. Run the project on your local server
