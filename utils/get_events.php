@@ -45,5 +45,8 @@ function show_event($uid)
   echo "<h2><span class='shadow'>" . $row["name"] . "</span></h2>";
   echo "<p class='description'>" . $row["description"] . "</p>";
   echo "</div>";
+  echo "<form action='../utils/event-actions.php' method='post'>";
+  echo "<button name='action' value='remove'>Go back</button>";
+  echo "</form>";
   echo "</div>";
 }

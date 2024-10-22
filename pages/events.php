@@ -69,16 +69,14 @@ session_start(); ?>
           <button>Submit</button>
         </form>
       </section>
-      <section id="eventOverlay"></section>
+      <?php include "../utils/get_events.php"; ?>
+      <section id="eventOverlay">
+        <?php if ($_SESSION["event-view"]) {
+          show_event($_SESSION["event-view"]);
+        } ?>
+      </section>
       <section id="events">
-      <?php
-      include "../utils/get_events.php";
-      if ($_SESSION["event-view"]) {
-        show_event($_SESSION["event-view"]);
-      } else {
-        get_events();
-      }
-      ?>
+      <?php get_events(); ?>
       </section>
 
     </main>
